@@ -1,10 +1,11 @@
 {
-  "name": "livecoding",
+  "name": "Comicbook sotry",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch src/serve.js"
   },
   "repository": {
     "type": "git",
@@ -13,9 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/IACarvalho/livecoding/issues"
-  },
   "homepage": "https://github.com/IACarvalho/livecoding#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
