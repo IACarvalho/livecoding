@@ -1,15 +1,8 @@
 version: '3'
 
 services:
-  web:
-    build: .
-    ports:
-      - "9000:9000"
-      - "8000:8000"
-    volumes:
-      - .:/var/www
   db:
-    image: mysql
+    image: mysql:5.7
     environment:
       MYSQL_DATABASE: database
       MYSQL_USER: iacarvalho
@@ -19,6 +12,5 @@ services:
       - "3306:3306"
     volumes:
       - dbdata:/var/lib/mysql
- 
 volumes:
   dbdata:

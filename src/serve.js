@@ -1,11 +1,12 @@
 import Fastify from 'fastify'
+import { comicBookController } from './controllers/comicBookController.js'
 
 const app = Fastify({
   logger: true
 })
 
-app.get('/', (request, reply) => {
-  return reply.send({ message: "Hello world!"})
+app.register(comicBookController, {
+  prefix: 'comic_book'
 })
 
 app.listen({ port: 3333}, (err, address) => {
